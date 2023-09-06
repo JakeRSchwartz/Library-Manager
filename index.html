@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="icon" src="images/book-icon.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+            <div><img class="logo" src="images/book-icon.png" alt="book logo"></div>
+               <div class="title">Library Manager</div>
+    </header>
+    <div class="main-wrapper">
+        <aside>
+            <div class="nav-item">
+            <div class="header2">
+                Enter Book information:
+            </div>
+        <form class="input-form">
+            <div class="input-block">
+            <input id="title" type="text" name="title" autocomplete="off" required>
+            <span class="placeholder">What is the title of the book?</span>
+            <div class="validation-block">
+                <p class="validation-text Vtitle">Please fill out this field.</p>
+            </div>
+            </div>
+            
+            <div class="input-block">
+                <input id="author" type="text" name="author" autocomplete="off" required>
+                <span class="placeholder">Who is the author of the book?</span>
+                <div class="validation-block">
+                    <p class="validation-text name">Please fill out this field.</p>
+                </div>
+            </div>
+
+            <div class="input-block">
+                <input id="pages" type="number" name="pages" autocomplete="off" required>
+                <span class="placeholder">How many pages are in the book?</span>
+                <div class="validation-block-2">
+                    <p class="validation-text number">Please enter a number bigger than 0.</p>
+                </div>
+            </div>
+            
+            <div class="checkbox">
+                <div>
+                <label class="checkbox-label">Have you read this book?</label>
+                    </div>
+                <div>
+                    <div class="check-input">
+                    <input id="read" type="checkbox" name="checkbox" autocomplete="off">
+                    </div>
+                </div>
+                </div>
+                <input type="button" value="ADD A NEW BOOK" id="add-book">
+        </form>
+        <footer>
+
+            <p class="project-info">
+                <i></i>
+                <span class="info-text"></span>
+                Read about this app!
+            </p>
+            <p class="">Jake Schwartz</p>
+        </footer>
+        </div>
+        </aside>
+    </aside>
+    <main class="book-wrapper">
+    <div class="library-info">
+    <p>Books Read<span id="books-read"></span></p>
+    <p> Books Not Read<span id="books-not"></span></p>
+    <p>Total Books<span id="total-books"></span></p>
+    </div>
+    <div class="lib-num">
+        <p><span id="read-num">1</span></p>
+        <p><span id="notread-num">2</span></p>
+        <p><span id="total-num">3</span></p>
+    </div>
+        <div id="book-card">
+            
+        </div>
+    </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

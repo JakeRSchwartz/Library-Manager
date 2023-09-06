@@ -1,0 +1,331 @@
+:root{
+--font-color: #E6E6EE;
+--accent-color: rgba(223, 233, 237, .75);
+--side-color: #1d1160
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    bottom:0;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 49%, rgba(13, 4, 191, 1) 100%);
+    color: var(--font-color);
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    width:100vw;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Top Header with main logo */
+header {
+    width: 100vw;
+    height:14rem;
+    display: flex;
+    background: var(--side-color);
+    align-items: center;
+    font-size: 3rem;
+    border-bottom: 1px solid black;
+}
+
+/* enter information header */
+.header2{
+    display:flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-left:10px
+}
+.logo{
+    width:7rem;
+    margin-left:25px;
+    margin-right:15px;
+}
+/* Main wrapper */
+.main-wrapper{
+    display:flex;
+    height:auto;
+    width:100vw;
+    bottom:0;
+    margin:0;
+    padding:0;
+}
+/* Navbar */
+aside{
+    padding: 0.5em 0 0.5em 0.5em;
+    display:flex;
+    width:23rem;
+    min-width: 21rem;
+    height:100%;
+    justify-content: center;
+    background: var(--side-color);
+    font-size: .1rem;
+    color:var(--accent-color);
+    margin:auto;
+    border-right:solid black 1px;
+}
+.nav-items{
+    display:block;
+    height:100%;
+    margin:2rem;
+}
+.input-block {
+    margin-top: 3rem;
+    margin-left:2rem;
+    
+}
+input{
+    position:relative;
+    width:15rem;
+    height:1rem;
+    padding:.4rem;
+    border:1px solid var(--accent-color);
+    background: var(--side-color);
+    border-radius:5px;
+    outline:none;
+    color:var(--accent-color);
+    font-size: .8em;
+}
+.validation-block{
+    margin-top: 4px;;
+    margin-left: 4.5rem;
+    color:transparent;
+    
+}
+.validation-block-2 {
+    margin-left:2.6rem;
+    color:transparent;
+    margin-top: 4px;
+}
+.red-text{
+    color:rgb(191, 3, 3)
+}
+#add-book{
+    padding:1.8rem;
+    padding-bottom:3.4rem;
+    margin-left:40px;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    transition: .5s;
+}
+#add-book:hover{
+    transform: scale(1.1);
+    color: goldenrod;
+    border-color: goldenrod;
+    cursor:pointer;
+}
+#add-book:active{
+    transform: translateY(1px);
+}
+
+/* Styling animation for input */
+.input-block span{
+    position:absolute;
+    padding:10px;
+    pointer-events: none;
+    left:0;
+    text-transform: uppercase;
+    margin-left:60px;
+    transition:.5s;
+}
+.input-block input:valid ~span,
+.input-block input:focus ~span
+{
+    color:goldenrod;
+    transform: translatey(-17px);
+    padding:0 10px;
+}
+
+.checkbox {
+    height: 4rem;
+    width: 14rem;
+    margin-left: 4.8rem;
+    margin-top: 1rem;
+    font-size: .8rem;
+}
+.checkbox > div {
+    margin-top:10px;
+}
+
+.check-input{
+    height:1rem;
+    width:1rem;
+    margin-left:4.3rem;
+}
+.project-info {
+    height: 5rem;
+    width: 100%;
+    font-size: .4rem;
+    margin-left:6.9rem;
+
+}
+/* Book count information */
+.library-info{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    margin-top:10px;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+.lib-num{
+    width: 100%;
+    height:3rem;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4rem;
+    margin-top:10px;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+    }
+.book-wrapper{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+}
+
+
+/*Cards for book AKA Main */
+#book-card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width:100%;
+    max-height:600px;
+    overflow-y: scroll;
+
+}
+#book-card > div{
+    flex-shrink:0;
+}
+.main-card{
+    margin:auto;
+    width:20rem;
+    height:25rem;
+    border:1px solid var(--accent-color);
+    margin-top:1.5rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.main-card > div{
+    margin:1rem;
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+.main-card > .card-pages{
+    font-size:1rem;
+}
+.read-btn{
+    padding:.7rem;
+    width:8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background:green;
+    border:1px solid var(--accent-color);
+    border-radius: 5px;
+    transition:.5s;
+}
+.red-readbtn{
+    padding: .7rem;
+    width: 8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: red;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+}
+.card-removeBTN{
+    padding:.7rem;
+    font-size:1.5rem;
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color:var(--font-color);
+    transition:.5s;
+    border-radius: 5px;
+}
+/*.read-btn:hover{
+    cursor:pointer;
+    transform:scale(1.1);
+}
+.read-btn:active:active{
+    transform: translateY(1px);
+
+}
+.red-readbtn:hover,
+.red-readbtn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.read-btn:active,
+.read-readbtn:active {
+    transform: translateY(1px);
+
+}
+*/
+.card-removeBTN:hover{
+    transform: scale(1.1);
+    color: goldenrod;
+    border-color: goldenrod;
+    cursor: pointer;
+}
+.card-removeBTN:active{
+    transform: translateY(1px);
+}
+@media screen and (max-width:750px){
+    .main-card{
+        width:12rem;
+        height:17rem;
+    }
+        .main-card>div {
+            margin: .5rem;
+            font-size: .8rem;
+            color: var(--font-color);
+        }
+    
+        .main-card>.card-pages {
+            font-size: 1rem;
+        }
+    
+        .read-btn {
+            padding: .7rem;
+            width: 8rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: green;
+            border: 1px solid var(--accent-color);
+            border-radius: 5px;
+            transition: .5s;
+        }
+    
+        .red-readbtn {
+            padding: .7rem;
+            width: 8rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: red;
+            border: 1px solid var(--accent-color);
+            border-radius: 5px;
+        }
+    
+        .card-removeBTN {
+            padding: .7rem;
+            font-size: 1.5rem;
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--font-color);
+            transition: .5s;
+            border-radius: 5px;
+        }
+
+}
+
+
